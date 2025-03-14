@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class PaperTimer : MonoBehaviour
 {
-    public LayerMask incinerator;
     public bool overIncin = false;
-    public float incinCheckDist;
-    private float bufferCheckDist = 0.1f;
     public float deleteTimer = 3;
     float Timer = 0;
-    bool timerOn = true;
+    bool inIncinerator = false;
 
     private void Update()
     {
-        incinCheckDist = (GetComponent<CapsuleCollider>().height / 2) + bufferCheckDist;
-
-        if (timerOn)
+        if (!inIncinerator)
         {
             Timer += Time.deltaTime;
 
@@ -25,5 +20,19 @@ public class PaperTimer : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if(collision.gameObject.CompareTag("Incinerator"))
+        {
+            Debug.Log("EnteredIncin");
+            inIncinerator = true;
+        } 
+    }
+    private void OnTriggerExit(Collider collision)
+    {
+        Debug.Log("ExitIncin");
+        inIncinerator = false;
     }
 }
