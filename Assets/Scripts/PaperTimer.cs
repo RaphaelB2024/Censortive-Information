@@ -5,19 +5,16 @@ using UnityEngine;
 public class PaperTimer : MonoBehaviour
 {
     public LayerMask incinerator;
-    public GameObject hit;
+    public bool overIncin = false;
+    public float incinCheckDist;
+    private float bufferCheckDist = 0.1f;
     public float deleteTimer = 3;
     float Timer = 0;
     bool timerOn = true;
 
     private void Update()
     {
-        var ray = new Ray(this.transform.position, this.transform.forward);
-        RaycastHit hit;
-        Physics.Raycast(ray, out hit);
-        {
-            Debug.Log(hit.transform.gameObject);
-        }
+        incinCheckDist = (GetComponent<CapsuleCollider>().height / 2) + bufferCheckDist;
 
         if (timerOn)
         {
@@ -29,6 +26,4 @@ public class PaperTimer : MonoBehaviour
             }
         }
     }
-
-
 }
