@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class PointManager : MonoBehaviour
 {
-    public float GovernmentTolerance = 10;
+    public int GovernmentTolerance = 10;
+    public int Quota = 0;
+
 }

@@ -6,15 +6,16 @@ public class PaperTimer : MonoBehaviour
 {
     public float deleteTimer = 3;
     float Timer = 0;
-    bool timerOn = true;
+    bool timerOn = false;
 
     private void Update()
     {
         if (timerOn)
         {
             Timer += Time.deltaTime;
+            Debug.Log("Time = " + Timer);
 
-            if (Timer > deleteTimer)
+            if (Timer >= deleteTimer)
             {
                 Destroy(gameObject);
             }
@@ -25,14 +26,12 @@ public class PaperTimer : MonoBehaviour
         if (other.gameObject.CompareTag("Incinerator"))
         {
             Debug.Log("Entered Incinerator");
+            timerOn = true;
+        }
+        else
+        {
             timerOn = false;
         }
     }
-
-   /* private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("Exit Incinerator");
-        timerOn = true;
-    }*/
 
 }
