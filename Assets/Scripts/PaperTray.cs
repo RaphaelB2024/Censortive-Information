@@ -25,10 +25,12 @@ public class PaperTray : MonoBehaviour
         if (collision.gameObject.CompareTag("GoodPaper"))
         {
             goodPapers++;
+            Destroy(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("BadPaper"))
         {
             badPapers++;
+            Destroy(collision.gameObject);
         }
     }
 
