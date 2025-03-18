@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class DayManager : MonoBehaviour
 {
-    public int GovernmentTolerance = 10;
-    public int Quota = 0;
+    public GameObject mainCamera;
 
+    void Start()
+    {
+        mainCamera.transform.position = new Vector3(0,-12, -6);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

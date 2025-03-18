@@ -7,7 +7,7 @@ public class PaperTray : MonoBehaviour
     int goodPapers = 0;
     int badPapers = 0;
     public float timer = 10;
-    public DayManager manager;
+    public PointManager manager;
 
     private void Update()
     {
@@ -37,8 +37,8 @@ public class PaperTray : MonoBehaviour
     void Deliver()
     {
         manager.GovernmentTolerance -= badPapers;
-        Debug.Log(manager.GovernmentTolerance);
+        Debug.Log("GT = " + manager.GovernmentTolerance);
         manager.Quota += goodPapers;
-        Debug.Log(manager.Quota);
+        Debug.Log("Q = " + manager.Quota);
     }
 }
