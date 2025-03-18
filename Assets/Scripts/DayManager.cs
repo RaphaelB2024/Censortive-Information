@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.GraphicsBuffer;
 
 public class DayManager : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class DayManager : MonoBehaviour
 
     public GameObject mainCamera;
     public GameObject camTarget;
-    private float speed = 1.5f;
+    public Transform rotateTarget;
+    private float speed = 0.5f;
 
     public bool startDay = false;
     public float dayTimer = 0;
@@ -20,7 +22,9 @@ public class DayManager : MonoBehaviour
         if (startDay)
         {
             Debug.Log("StartDay");
-            Reposition();
+            Vector3 direction = rotateTarget.position - camTarget.transform.position;
+            Quaternion rotation = Quaternion.LookRotation(direction);
+            transform.rotation = rotation;
             dayTimer += Time.deltaTime;
         }
 
@@ -33,8 +37,5 @@ public class DayManager : MonoBehaviour
         }
     }
 
-    void Reposition()
-    { 
-        transform.position = Vector3.MoveTowards(transform.position, camTarget.transform.position, speed * Time.deltaTime);
-    }
+
 }
