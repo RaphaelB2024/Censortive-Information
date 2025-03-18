@@ -7,7 +7,7 @@ public class PaperTray : MonoBehaviour
     int goodPapers = 0;
     int badPapers = 0;
     public float timer = 10;
-    public PointManager manager;
+    public DayManager manager;
 
     private void Update()
     {
