@@ -8,10 +8,11 @@ public class DayManager : MonoBehaviour
 {
     public PointManager manager;
 
+    public GameObject Spawner;
     public GameObject mainCamera;
-    public GameObject camTarget;
+    public Transform camTarget;
     public Transform rotateTarget;
-    private float speed = 0.5f;
+    private float speed = 20f;
 
     public bool startDay = false;
     public float dayTimer = 0;
@@ -22,9 +23,8 @@ public class DayManager : MonoBehaviour
         if (startDay)
         {
             Debug.Log("StartDay");
-            Vector3 direction = rotateTarget.position - camTarget.transform.position;
-            Quaternion rotation = Quaternion.LookRotation(direction);
-            transform.rotation = rotation;
+            Relocate();
+            Spawner.SetActive(true);
             dayTimer += Time.deltaTime;
         }
 
@@ -37,5 +37,10 @@ public class DayManager : MonoBehaviour
         }
     }
 
+    void Relocate()
+    {
+        mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, camTarget.position, speed * Time.deltaTime);
+        //mainCamera.transform.Rotate();
+    }
 
 }

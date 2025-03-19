@@ -14,7 +14,7 @@ public class PaperDragger : MonoBehaviour
     private void OnMouseDown()
     {
         mousePos = Input.mousePosition - GetMousePos();
-        mousePos.z = -10;
+        mousePos.y = -10;
     }
 
     private void OnMouseDrag()
