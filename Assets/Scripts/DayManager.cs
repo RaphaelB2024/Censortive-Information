@@ -13,6 +13,7 @@ public class DayManager : MonoBehaviour
     public Transform camTarget;
     public Transform rotateTarget;
     private float speed = 20f;
+    private float rotateSpeed = 0.5f;
 
     public bool startDay = false;
     public float dayTimer = 0;
@@ -31,15 +32,18 @@ public class DayManager : MonoBehaviour
         {
             if(manager.GovernmentTolerance > 0 && manager.Quota > 30)
             {
-                
+                startDay = false;
             }
         }
     }
 
     void Relocate()
     {
+        //direction
         mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, camTarget.position, speed * Time.deltaTime);
-        mainCamera.transform.eulerAngles = new Vector3(90,0,0);
+
+        //rotation
+        Quaternion rotation = Quaternion.LookRotation((rotateTarget.position - mainCamera.transform.position).normalised);
     }
 
 }
