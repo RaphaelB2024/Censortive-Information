@@ -7,13 +7,9 @@ using static UnityEngine.GraphicsBuffer;
 public class DayManager : MonoBehaviour
 {
     public PointManager manager;
-
+    public CamMover Mover;
     public GameObject Spawner;
     public GameObject mainCamera;
-    public Transform camTarget;
-    public Transform rotateTarget;
-    private float speed = 20f;
-    private float rotateSpeed = 0.5f;
 
     public bool startDay = false;
     public float dayTimer = 0;
@@ -23,7 +19,7 @@ public class DayManager : MonoBehaviour
     {
         if (startDay)
         {
-            Debug.Log("StartDay");Relocate();
+            Mover.move = true;
             Spawner.SetActive(true);
             dayTimer += Time.deltaTime;
         }
@@ -36,14 +32,4 @@ public class DayManager : MonoBehaviour
             }
         }
     }
-
-    void Relocate()
-    {
-        //direction
-        mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, camTarget.position, speed * Time.deltaTime);
-
-        //rotation
-        Quaternion rotation = Quaternion.LookRotation((rotateTarget.position - mainCamera.transform.position).normalised);
-    }
-
 }
