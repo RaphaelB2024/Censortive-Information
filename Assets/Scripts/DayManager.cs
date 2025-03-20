@@ -22,8 +22,7 @@ public class DayManager : MonoBehaviour
     {
         if (startDay)
         {
-            Debug.Log("StartDay");
-            Relocate();
+            Debug.Log("StartDay");Relocate();
             Spawner.SetActive(true);
             dayTimer += Time.deltaTime;
         }
@@ -40,7 +39,7 @@ public class DayManager : MonoBehaviour
     void Relocate()
     {
         mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, camTarget.position, speed * Time.deltaTime);
-        //mainCamera.transform.Rotate();
+        mainCamera.transform.eulerAngles = new Vector3(90,0,0);
     }
 
 }
