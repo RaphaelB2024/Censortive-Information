@@ -10,6 +10,8 @@ public class DayManager : MonoBehaviour
     public CamMover Mover;
     public GameObject Spawner;
     public GameObject mainCamera;
+    public GameObject startText;
+
 
     public bool startDay = false;
     public float dayTimer = 0;
@@ -20,6 +22,7 @@ public class DayManager : MonoBehaviour
         if (startDay)
         {
             Mover.move = true;
+            startText.SetActive(false);
             Spawner.SetActive(true);
             dayTimer += Time.deltaTime;
         }
@@ -29,6 +32,8 @@ public class DayManager : MonoBehaviour
             if(manager.GovernmentTolerance > 0 && manager.Quota > 30)
             {
                 startDay = false;
+                Spawner.SetActive(false);
+                //SceneManager.SetActiveScene();
             }
         }
     }

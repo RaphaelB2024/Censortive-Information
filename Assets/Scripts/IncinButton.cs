@@ -14,12 +14,10 @@ public class IncinButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("ButtonDown");
         incin.incinerate = true;
     }
     private void OnMouseUp()
     {
-        Debug.Log("ButtonUp");
         incin.incinerate = false;
     }
 }

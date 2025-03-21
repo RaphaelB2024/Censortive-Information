@@ -14,7 +14,6 @@ public class DayButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("ButtonDown");
         manager.startDay = true;
     }
 }

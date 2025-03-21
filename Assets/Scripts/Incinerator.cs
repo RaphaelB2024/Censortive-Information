@@ -9,10 +9,8 @@ public class Incinerator : MonoBehaviour
 
     private void OnTriggerStay(Collider collision)
     {
-        Debug.Log("Entered Incin");
         if (incinerate)
         {
-            Debug.Log("Incinerate");
             Destroy(collision.gameObject);
         }
     }
