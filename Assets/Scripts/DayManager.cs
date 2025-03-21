@@ -33,7 +33,7 @@ public class DayManager : MonoBehaviour
             {
                 startDay = false;
                 Spawner.SetActive(false);
-                //SceneManager.SetActiveScene();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
