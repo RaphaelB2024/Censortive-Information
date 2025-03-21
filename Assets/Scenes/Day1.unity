@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d2c4f68bb06ead40ada7f224b75c2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  incinerate: 0
+  incinerate: 1
 --- !u!54 &102071865
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -237,8 +237,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -261,8 +261,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.7792963, y: 1.7405838, z: 91.93357}
+  m_Center: {x: 0.0026752476, y: 0.99755967, z: -45.96679}
 --- !u!1 &448562556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,7 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91201e1c80a192429c6979dda5f03fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  incin: {fileID: 0}
+  incin: {fileID: 102071864}
 --- !u!212 &1559501329
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1208,9 +1208,9 @@ MonoBehaviour:
   - {fileID: 9065358614847928168, guid: 35e0e1ee45c63db48a20e5fcca85b5f2, type: 3}
   - {fileID: 9065358614847928168, guid: 4ac825f8f89d1e84c9cbd96916cfc50b, type: 3}
   minX: -18.6
-  maxX: -10.8
+  maxX: -8.88
   minZ: -9
-  maxZ: -2.7
+  maxZ: -3.3
   minSpawnTime: 2
   maxSpawnTime: 6
 --- !u!4 &1910924323
