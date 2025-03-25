@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class UIFade : MonoBehaviour
 {
-    void Fade()
+    public float speed = 5;
+    public void Fade()
     {
         StartCoroutine(startFade());
     }
@@ -12,9 +13,9 @@ public class UIFade : MonoBehaviour
     IEnumerator startFade()
     {
         CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
-        while (canvasGroup.alpha > 0)
+        while (canvasGroup.alpha < 1)
         {
-            canvasGroup.alpha -= Time.deltaTime / 2;
+            canvasGroup.alpha += Time.deltaTime / speed;
             yield return null;
         }
         canvasGroup.interactable = false;

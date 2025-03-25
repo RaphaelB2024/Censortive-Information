@@ -7,6 +7,7 @@ using static UnityEngine.GraphicsBuffer;
 public class DayManager : MonoBehaviour
 {
     public PointManager manager;
+    public UIFade UIFade;
     public CamMover Mover;
     public GameObject Spawner;
     public GameObject mainCamera;
@@ -29,10 +30,11 @@ public class DayManager : MonoBehaviour
 
         if(dayTimer >= dayLength)
         {
-            if(manager.GovernmentTolerance > 0 && manager.Quota > 30)
+            if(manager.GovernmentTolerance > 0 && manager.Quota >= 0)
             {
                 startDay = false;
                 Spawner.SetActive(false);
+                UIFade.Fade();
             }
         }
     }
