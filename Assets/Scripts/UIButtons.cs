@@ -8,6 +8,6 @@ public class UIButtons : MonoBehaviour
 {
  void nextDay(int index)
     {
-        SceneManager.LoadScene(index);
+        SceneManager.LoadScene(index + 1);
     }
 }
