@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1435027234649821838}
   - component: {fileID: 8617387989158171639}
   m_Layer: 0
-  m_Name: badPaper (3)
+  m_Name: shortguy
   m_TagString: BadPaper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

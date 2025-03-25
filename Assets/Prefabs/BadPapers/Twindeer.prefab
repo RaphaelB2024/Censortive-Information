@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &531955306214572195
+--- !u!1 &8037398709828521040
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8716864707739867512}
-  - component: {fileID: 217473698623721270}
-  - component: {fileID: 469329399971368875}
-  - component: {fileID: 6929576994798858755}
-  - component: {fileID: 8002473754917763238}
+  - component: {fileID: 1610564229393881996}
+  - component: {fileID: 1717220949214143612}
+  - component: {fileID: 4519595089973578473}
+  - component: {fileID: 7729871203437030071}
+  - component: {fileID: 5817528019589588181}
   m_Layer: 0
-  m_Name: goodPaper (1)
-  m_TagString: GoodPaper
+  m_Name: Twindeer
+  m_TagString: BadPaper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8716864707739867512
+--- !u!4 &1610564229393881996
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 531955306214572195}
+  m_GameObject: {fileID: 8037398709828521040}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -41.91, y: 0, z: -6.76}
-  m_LocalScale: {x: 0.83133185, y: 0.83133185, z: 0.83133185}
+  m_LocalPosition: {x: -11.421, y: 15.88, z: -7.886}
+  m_LocalScale: {x: 0.80224717, y: 0.80224717, z: 0.46188575}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!212 &217473698623721270
+--- !u!212 &1717220949214143612
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 531955306214572195}
+  m_GameObject: {fileID: 8037398709828521040}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9a482ece5332b1c43b6cc4f9a80ab723, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc8dd36f0b696074ebcbc675ce398a12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,13 +87,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &469329399971368875
+--- !u!65 &4519595089973578473
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 531955306214572195}
+  m_GameObject: {fileID: 8037398709828521040}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -106,15 +106,15 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.6336174, y: 6.282903, z: 2.3039932}
-  m_Center: {x: 0.008192045, y: -0.039262272, z: 1.1674294}
---- !u!54 &6929576994798858755
+  m_Size: {x: 4.5470386, y: 6.4810524, z: 7.0377793}
+  m_Center: {x: -0.03234911, y: -0.006683768, z: 3.5343351}
+--- !u!54 &7729871203437030071
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 531955306214572195}
+  m_GameObject: {fileID: 8037398709828521040}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -135,13 +135,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8002473754917763238
+--- !u!114 &5817528019589588181
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 531955306214572195}
+  m_GameObject: {fileID: 8037398709828521040}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 251075a44b2e9a5418ce1639300859c3, type: 3}
