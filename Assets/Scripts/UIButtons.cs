@@ -6,8 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class UIButtons : MonoBehaviour
 {
- void nextDay(int index)
+    public GameObject subjectCanvas;
+
+ public void nextDay(int index)
     {
         SceneManager.LoadScene(index + 1);
+    }
+
+    public void destroyCanvas()
+    {
+        Destroy(subjectCanvas);
     }
 }
