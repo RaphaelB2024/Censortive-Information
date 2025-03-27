@@ -30,12 +30,26 @@ public class DayManager : MonoBehaviour
 
         if(dayTimer >= dayLength)
         {
-            if(manager.GovernmentTolerance > 0 && manager.Quota >= 0)
+            startDay = false;
+            Spawner.SetActive(false);
+            UIFade.Fade();
+            StartCoroutine(Waiter());
+            
+
+            if (manager.GovernmentTolerance > 0 && manager.Quota >= manager.quotaTarget)
             {
-                startDay = false;
-                Spawner.SetActive(false);
-                UIFade.Fade();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+
+            else
+            {
+                SceneManager.LoadScene("Death Ending");
             }
         }
+    }
+
+    IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(5);
     }
 }
