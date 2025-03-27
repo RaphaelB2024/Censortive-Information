@@ -50,6 +50,6 @@ public class DayManager : MonoBehaviour
 
     IEnumerator Waiter()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10f);
     }
 }

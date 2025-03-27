@@ -151,9 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c413ea0e17b30604abe35f47cb54fd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GovernmentTolerance: 5
+  GovernmentTolerance: 50
   Quota: 0
-  quotaTarget: 10
+  quotaTarget: 20
 --- !u!4 &3692804
 Transform:
   m_ObjectHideFlags: 0
@@ -274,19 +274,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7d5f386449c28b3409fa496f7befde95, type: 3}
       propertyPath: m_LocalScale.x
-      value: -690.43994
+      value: -644.84906
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d5f386449c28b3409fa496f7befde95, type: 3}
       propertyPath: m_LocalScale.y
-      value: 18.854567
+      value: 17.60957
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d5f386449c28b3409fa496f7befde95, type: 3}
       propertyPath: m_LocalScale.z
-      value: -474.75226
+      value: -443.4036
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d5f386449c28b3409fa496f7befde95, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.9
+      value: -21.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d5f386449c28b3409fa496f7befde95, type: 3}
       propertyPath: m_LocalPosition.y
@@ -294,7 +294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d5f386449c28b3409fa496f7befde95, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.46
+      value: -4.83
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d5f386449c28b3409fa496f7befde95, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1219,8 +1219,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2362247, y: 1.3745832, z: 101.74901}
-  m_Center: {x: 0.5628937, y: 1.0518888, z: -50.7745}
+  m_Size: {x: 1.0280977, y: 1.2648467, z: 101.74901}
+  m_Center: {x: 0.0013872874, y: 0.9970208, z: -50.774506}
 --- !u!54 &1228428610
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1961,7 +1961,7 @@ MonoBehaviour:
   - {fileID: 1764134317918468552, guid: b328a9c6c18111645be691c5dc431c68, type: 3}
   - {fileID: 2619168510781968684, guid: f76327efb52d240438a4b3de52125e16, type: 3}
   - {fileID: 422826249611267711, guid: 64ad4baba7b048e4d90fb9f6d8c24989, type: 3}
-  minX: -11.4
+  minX: -18.6
   maxX: -9
   minZ: -7.5
   maxZ: -3

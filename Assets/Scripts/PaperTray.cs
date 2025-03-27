@@ -6,39 +6,35 @@ public class PaperTray : MonoBehaviour
 {
     int goodPapers = 0;
     int badPapers = 0;
-    public float timer = 10;
     public PointManager manager;
-
-    private void Update()
-    {
-        timer -= Time.deltaTime;
-
-        if (timer <= 0)
-        {
-            Deliver();
-            timer = 10;
-        }
-    }
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("GoodPaper"))
         {
             goodPapers++;
-            Destroy(collision.gameObject);
+            Debug.Log("good papers: " + goodPapers);
         }
         else if (collision.gameObject.CompareTag("BadPaper"))
         {
             badPapers++;
-            Destroy(collision.gameObject);
+            Debug.Log("bad papers: " + badPapers);
+
         }
     }
 
-    void Deliver()
+    private void OnTriggerExit(Collider other)
     {
-        manager.GovernmentTolerance -= badPapers;
-        Debug.Log("GT = " + manager.GovernmentTolerance);
-        manager.Quota += goodPapers;
-        Debug.Log("Q = " + manager.Quota);
+        if (other.gameObject.CompareTag("GoodPaper"))
+        {
+            goodPapers--;
+            Debug.Log("good papers: " + badPapers);
+        }
+
+        else if (other.gameObject.CompareTag("BadPaper"))
+        {
+            badPapers--;
+            Debug.Log("bad papers: " + badPapers);
+        }
     }
 }

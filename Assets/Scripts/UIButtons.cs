@@ -6,15 +6,28 @@ using UnityEngine.SceneManagement;
 
 public class UIButtons : MonoBehaviour
 {
-    public GameObject subjectCanvas;
+    public GameObject menu;
+    public GameObject credit;
 
- public void nextDay(int index)
+ public void begin()
     {
-        SceneManager.LoadScene(index + 1);
+        SceneManager.LoadScene("Day 1");
     }
 
-    public void destroyCanvas()
+    public void credits()
     {
-        Destroy(subjectCanvas);
+        menu.SetActive(false);
+        credit.SetActive(true);
+    }
+
+    public void backtomenu()
+    {
+        credit.SetActive(false);
+        menu.SetActive(true);
+    }
+
+    public void quit()
+    {
+        Application.Quit();
     }
 }
