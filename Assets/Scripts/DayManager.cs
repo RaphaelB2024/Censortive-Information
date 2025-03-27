@@ -18,6 +18,11 @@ public class DayManager : MonoBehaviour
     public float dayTimer = 0;
     public float dayLength = 0;
 
+    IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(10f);
+    }
+
     void Update()
     {
         if (startDay)
@@ -33,23 +38,18 @@ public class DayManager : MonoBehaviour
             startDay = false;
             Spawner.SetActive(false);
             UIFade.Fade();
-            StartCoroutine(Waiter());
             
-
             if (manager.GovernmentTolerance > 0 && manager.Quota >= manager.quotaTarget)
             {
+                StartCoroutine(Waiter());
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
 
             else
             {
+                StartCoroutine(Waiter());
                 SceneManager.LoadScene("Death Ending");
             }
         }
-    }
-
-    IEnumerator Waiter()
-    {
-        yield return new WaitForSeconds(10f);
     }
 }

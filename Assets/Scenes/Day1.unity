@@ -661,7 +661,7 @@ MonoBehaviour:
   startText: {fileID: 308674276}
   startDay: 0
   dayTimer: 0
-  dayLength: 60
+  dayLength: 3
 --- !u!4 &537101495
 Transform:
   m_ObjectHideFlags: 0
