@@ -41,6 +41,7 @@ public class DayManager : MonoBehaviour
             
             if (manager.GovernmentTolerance > 0 && manager.Quota >= manager.quotaTarget)
             {
+                manager.GovernmentTolerance += Random.Range(0,5);
                 StartCoroutine(Waiter());
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }

@@ -11,7 +11,7 @@ public class UIButtons : MonoBehaviour
 
  public void begin()
     {
-        SceneManager.LoadScene("Day 1");
+        SceneManager.LoadScene("Day1");
     }
 
     public void credits()
