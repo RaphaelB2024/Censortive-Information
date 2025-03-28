@@ -571,7 +571,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a56de82be513a754aa4460de19e90c89, type: 2}
+  - {fileID: 2100000, guid: 584015237d259284892946eb3f8644f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -667,7 +667,7 @@ MonoBehaviour:
   startText: {fileID: 308674276}
   startDay: 0
   dayTimer: 0
-  dayLength: 60
+  dayLength: 1000
 --- !u!4 &537101495
 Transform:
   m_ObjectHideFlags: 0
@@ -988,7 +988,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -3957782524123411102, guid: 26f61db7704ccbc4799b4b9213657e02, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1794417449}
+      addedObject: {fileID: 1794417453}
   m_SourcePrefab: {fileID: 100100000, guid: 26f61db7704ccbc4799b4b9213657e02, type: 3}
 --- !u!1 &963194225
 GameObject:
@@ -1933,8 +1933,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -3957782524123411102, guid: 26f61db7704ccbc4799b4b9213657e02, type: 3}
   m_PrefabInstance: {fileID: 896589012}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1794417449
-MeshCollider:
+--- !u!65 &1794417453
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1951,10 +1951,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5302568919011541938, guid: 26f61db7704ccbc4799b4b9213657e02, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.042368334, y: 0.29323918, z: 0.04075567}
+  m_Center: {x: -0.01618417, y: -0.1604192, z: 0.015377834}
 --- !u!1 &1830138553 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d5f386449c28b3409fa496f7befde95, type: 3}
@@ -2029,7 +2028,7 @@ MonoBehaviour:
   - {fileID: 1764134317918468552, guid: b328a9c6c18111645be691c5dc431c68, type: 3}
   - {fileID: 2619168510781968684, guid: f76327efb52d240438a4b3de52125e16, type: 3}
   - {fileID: 422826249611267711, guid: 64ad4baba7b048e4d90fb9f6d8c24989, type: 3}
-  minX: -11.4
+  minX: -14
   maxX: -9
   minZ: -7.5
   maxZ: -3

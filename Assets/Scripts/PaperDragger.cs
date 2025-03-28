@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PaperDragger : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PaperDragger : MonoBehaviour
     private void OnMouseDown()
     {
         mousePos = Input.mousePosition - GetMousePos();
-        mousePos.y = -10;
+        mousePos.y = 15;
     }
 
     private void OnMouseDrag()
