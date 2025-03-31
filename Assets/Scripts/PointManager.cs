@@ -5,6 +5,7 @@ using UnityEngine;
 public class PointManager : MonoBehaviour
 {
     public int GovernmentTolerance = 10;
+    public int ResistancePoints = 0;
     public int Quota = 0;
     public int quotaTarget = 20;
 
