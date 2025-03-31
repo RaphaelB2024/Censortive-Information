@@ -12,13 +12,13 @@ public class PaperTray : MonoBehaviour
         {
             Destroy(collision.gameObject);
             manager.Quota++;
-            Debug.Log("good papers: " + manager.Quota);
+            Debug.Log("Quota: " + manager.Quota);
         }
         else if (collision.gameObject.CompareTag("BadPaper"))
         {
             Destroy(collision.gameObject);
             manager.GovernmentTolerance--;
-            Debug.Log("bad papers: " + manager.GovernmentTolerance);
+            Debug.Log("GT: " + manager.GovernmentTolerance);
         }
         else if(collision.gameObject.CompareTag("ResistancePaper"))
         {

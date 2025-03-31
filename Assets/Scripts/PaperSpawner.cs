@@ -44,7 +44,7 @@ public class PaperSpawner : MonoBehaviour
             //Instantiate spawns a gameObject - this case from objectsToSpawn
             //second parameter is where to spawn
             //third parameter is rotation, Quarternion.identity means no rotation
-            Instantiate(objectsToSpawn[selection], transform.position, Quaternion.Euler( new Vector3(90,0,0)));
+            Instantiate(objectsToSpawn[selection], randompos, Quaternion.Euler( new Vector3(90,0,0)));
 
             //After spawn, timer is reset and a new time until spawn is selected
             timeTillSpawn = Random.Range(minSpawnTime, maxSpawnTime);
