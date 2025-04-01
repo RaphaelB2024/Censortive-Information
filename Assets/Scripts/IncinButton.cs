@@ -5,6 +5,8 @@ using UnityEngine;
 public class IncinButton : MonoBehaviour
 {
     public Incinerator incin;
+    public GameObject Fires;
+    bool incineratable = true;
     Vector3 mousePos;
 
     private Vector3 GetMousePos()
@@ -14,10 +16,23 @@ public class IncinButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        incin.incinerate = true;
+        if (incineratable)
+        {
+            incin.incinerate = true;
+            StartCoroutine(StartFire());
+        }
     }
     private void OnMouseUp()
     {
         incin.incinerate = false;
+    }
+
+    IEnumerator StartFire()
+    {
+        Fires.SetActive(true);
+        incineratable = false;
+        yield return new WaitForSeconds(0.5f);
+        Fires.SetActive(false);
+        incineratable = true;
     }
 }
