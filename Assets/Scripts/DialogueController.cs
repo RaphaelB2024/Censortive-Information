@@ -6,6 +6,7 @@ using TMPro;
 public class DialogueController : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
+    public GameObject failScreen;
     public string[] lines;
     public float textSpeed;
 
@@ -60,6 +61,7 @@ public class DialogueController : MonoBehaviour
         }
         else
         {
+            failScreen.SetActive(true);
             gameObject.SetActive(false);
         }
     }

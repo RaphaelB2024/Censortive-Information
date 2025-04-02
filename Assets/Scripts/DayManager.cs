@@ -18,9 +18,17 @@ public class DayManager : MonoBehaviour
     public float dayTimer = 0;
     public float dayLength = 0;
 
-    IEnumerator Waiter()
+    IEnumerator NextDay()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(6f);
+        manager.GovernmentTolerance += Random.Range(0, 5);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    IEnumerator LoseEnd()
+    {
+        yield return new WaitForSeconds(6f);
+        SceneManager.LoadScene("Death Ending");
     }
 
     void Update()
@@ -41,15 +49,12 @@ public class DayManager : MonoBehaviour
             
             if (manager.GovernmentTolerance > 0 && manager.Quota >= manager.quotaTarget)
             {
-                manager.GovernmentTolerance += Random.Range(0,5);
-                StartCoroutine(Waiter());
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                StartCoroutine(NextDay());
             }
 
             else
             {
-                StartCoroutine(Waiter());
-                SceneManager.LoadScene("Death Ending");
+                StartCoroutine(LoseEnd());
             }
         }
     }

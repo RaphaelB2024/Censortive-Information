@@ -26,6 +26,11 @@ public class UIButtons : MonoBehaviour
         menu.SetActive(true);
     }
 
+    public void loadMain()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void quit()
     {
         Application.Quit();
