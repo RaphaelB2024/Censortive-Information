@@ -154,7 +154,7 @@ MonoBehaviour:
   GovernmentTolerance: 5
   ResistancePoints: 0
   Quota: 0
-  quotaTarget: 0
+  quotaTarget: 5
 --- !u!4 &3692804
 Transform:
   m_ObjectHideFlags: 0
@@ -979,7 +979,7 @@ MonoBehaviour:
   startText: {fileID: 308674276}
   startDay: 0
   dayTimer: 0
-  dayLength: 5
+  dayLength: 60
 --- !u!4 &537101495
 Transform:
   m_ObjectHideFlags: 0
