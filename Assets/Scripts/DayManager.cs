@@ -45,7 +45,7 @@ public class DayManager : MonoBehaviour
         {
             startDay = false;
             Spawner.SetActive(false);
-            UIFade.Fade();
+            UIFade.FadeIn();
             
             if (manager.GovernmentTolerance > 0 && manager.Quota >= manager.quotaTarget)
             {

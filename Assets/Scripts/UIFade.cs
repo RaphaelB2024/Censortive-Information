@@ -4,18 +4,37 @@ using UnityEngine;
 
 public class UIFade : MonoBehaviour
 {
-    public float speed = 5;
-    public void Fade()
+    public float inspeed = 5;
+    public float outspeed = 5;
+    public void FadeIn()
     {
-        StartCoroutine(startFade());
+        StartCoroutine(startFadeIn());
     }
 
-    IEnumerator startFade()
+    private void Start()
+    {
+        StartCoroutine(startFadeOut());
+    }
+
+    IEnumerator startFadeIn()
     {
         CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
         while (canvasGroup.alpha < 1)
         {
-            canvasGroup.alpha += Time.deltaTime / speed;
+            canvasGroup.alpha += Time.deltaTime / inspeed;
+            yield return null;
+        }
+        canvasGroup.interactable = false;
+        yield return null;
+    }
+
+    IEnumerator startFadeOut()
+    {
+        CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
+        while (canvasGroup.alpha > 0)
+        {
+            Debug.Log("FadeOut");
+            canvasGroup.alpha -= Time.deltaTime / outspeed;
             yield return null;
         }
         canvasGroup.interactable = false;
