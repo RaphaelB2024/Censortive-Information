@@ -5,6 +5,7 @@ using UnityEngine;
 public class DayButton : MonoBehaviour
 {
     public DayManager manager;
+    public GameObject music;
     Vector3 mousePos;
 
     private Vector3 GetMousePos()
@@ -15,5 +16,6 @@ public class DayButton : MonoBehaviour
     private void OnMouseDown()
     {
         manager.startDay = true;
+        music.SetActive(true);
     }
 }
