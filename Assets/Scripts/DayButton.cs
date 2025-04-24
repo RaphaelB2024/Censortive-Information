@@ -6,7 +6,6 @@ public class DayButton : MonoBehaviour
 {
     public DayManager manager;
     Vector3 mousePos;
-    [SerializeField] private AudioClip musicClip;
 
     private Vector3 GetMousePos()
     {
@@ -16,6 +15,5 @@ public class DayButton : MonoBehaviour
     private void OnMouseDown()
     {
         manager.startDay = true;
-        soundManager.instance.playClip(musicClip, transform, 1f);
     }
 }
