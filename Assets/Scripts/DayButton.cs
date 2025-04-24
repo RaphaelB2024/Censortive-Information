@@ -5,8 +5,8 @@ using UnityEngine;
 public class DayButton : MonoBehaviour
 {
     public DayManager manager;
-    public GameObject music;
     Vector3 mousePos;
+    [SerializeField] private AudioClip musicClip;
 
     private Vector3 GetMousePos()
     {
@@ -16,6 +16,6 @@ public class DayButton : MonoBehaviour
     private void OnMouseDown()
     {
         manager.startDay = true;
-        music.SetActive(true);
+        soundManager.instance.playClip(musicClip, transform, 1f);
     }
 }
