@@ -18,11 +18,11 @@ public class DayManager : MonoBehaviour
     public float dayTimer = 0;
     public float dayLength = 0;
 
-    void Start()
+    private void Start()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
+        Scene scene = SceneManager.GetActiveScene();
     }
+
 
     IEnumerator NextDay()
     {
@@ -53,12 +53,12 @@ public class DayManager : MonoBehaviour
             Spawner.SetActive(false);
             UIFade.FadeIn();
 
-            if()
+            /*if(currentScene.name == "Day2")
             {
 
-            }
+            }*/
             
-            else if (manager.GovernmentTolerance > 0 && manager.Quota >= manager.quotaTarget)
+            if (manager.GovernmentTolerance > 0 && manager.Quota >= manager.quotaTarget)
             {
                 StartCoroutine(NextDay());
             }
