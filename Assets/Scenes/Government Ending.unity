@@ -612,7 +612,7 @@ GameObject:
   - component: {fileID: 84015083}
   - component: {fileID: 84015082}
   m_Layer: 5
-  m_Name: DeathCanvas
+  m_Name: EndCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2759,9 +2759,10 @@ MonoBehaviour:
   textComponent: {fileID: 23977429}
   failScreen: {fileID: 84015081}
   lines:
-  - 'guess what '
-  - 'you''re fired '
-  - that's gonna be bad for your health
+  - guess what.
+  - You passed your probation!
+  - with your censorship skills the government will never be overthrown!
+  - See you next week!
   textSpeed: 0.003
 --- !u!1 &1769012323
 GameObject:
