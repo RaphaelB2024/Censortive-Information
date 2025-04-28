@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Death Ending.unity
     guid: bdfb3044621e87541b0dadbc67cafa1a
+  - enabled: 1
+    path: Assets/Scenes/Government Ending.unity
+    guid: 553b21fda6f5a2a448282cddd216eb77
+  - enabled: 1
+    path: Assets/Scenes/Resistance Ending.unity
+    guid: a8a192cec4b63f348b179c61c40c732c
   m_configObjects: {}

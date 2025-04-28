@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using static UnityEngine.GraphicsBuffer;
 
-public class DayManager : MonoBehaviour
+public class finalDayManager : MonoBehaviour
 {
     public PointManager manager;
     public UIFade UIFade;
@@ -18,11 +18,16 @@ public class DayManager : MonoBehaviour
     public float dayTimer = 0;
     public float dayLength = 0;
 
-    IEnumerator NextDay()
+    IEnumerator GovEnd()
     {
         yield return new WaitForSeconds(6f);
-        manager.GovernmentTolerance += Random.Range(0, 5);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Government Ending");
+    }
+
+    IEnumerator ResEnd()
+    {
+        yield return new WaitForSeconds(6f);
+        SceneManager.LoadScene("Resistance Ending");
     }
 
     IEnumerator LoseEnd()
@@ -41,15 +46,20 @@ public class DayManager : MonoBehaviour
             dayTimer += Time.deltaTime;
         }
 
-        if(dayTimer >= dayLength)
+        if (dayTimer >= dayLength)
         {
             startDay = false;
             Spawner.SetActive(false);
             UIFade.FadeIn();
-            
-            if (manager.GovernmentTolerance > 0 && manager.Quota >= manager.quotaTarget)
+
+            if (manager.GovernmentTolerance > 0 && manager.Quota >= manager.quotaTarget && manager.ResistancePoints > 8)
             {
-                StartCoroutine(NextDay());
+                StartCoroutine(ResEnd());
+            }
+
+            else if (manager.GovernmentTolerance > 0 && manager.Quota >= manager.quotaTarget)
+            {
+                StartCoroutine(GovEnd());
             }
 
             else
