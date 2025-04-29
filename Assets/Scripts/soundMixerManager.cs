@@ -9,16 +9,16 @@ public class soundMixerManager : MonoBehaviour
 
     public void setMasterVol(float level)
     {
-        audioMixer.SetFloat("masterVolume", level);
+        audioMixer.SetFloat("masterVolume", Mathf.Log10(level) * 20f);
     }
 
     public void setFXVol(float level)
     {
-        audioMixer.SetFloat("sfxVolume", level);
+        audioMixer.SetFloat("sfxVolume", Mathf.Log10(level) * 20f);
     }
 
     public void setMusicVol(float level)
     {
-        audioMixer.SetFloat("musicVolume", level);
+        audioMixer.SetFloat("musicVolume", Mathf.Log10(level) * 20f);
     }
 }

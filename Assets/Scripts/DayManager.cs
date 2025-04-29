@@ -36,7 +36,6 @@ public class DayManager : MonoBehaviour
         if (startDay)
         {
             Mover.move = true;
-            startText.SetActive(false);
             Spawner.SetActive(true);
             dayTimer += Time.deltaTime;
         }

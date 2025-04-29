@@ -5,6 +5,9 @@ using UnityEngine;
 public class PaperTray : MonoBehaviour
 {
     public PointManager manager;
+    [SerializeField] private AudioClip[] goodPaperClips;
+    [SerializeField] private AudioClip[] badPaperClips;
+    [SerializeField] private AudioClip[] resistancePaperClips;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -12,20 +15,27 @@ public class PaperTray : MonoBehaviour
         {
             Destroy(collision.gameObject);
             manager.Quota++;
+            manager.GovernmentTolerance += 0.5f;
             Debug.Log("Quota: " + manager.Quota);
+            Debug.Log("GT: " + manager.GovernmentTolerance);
+            soundManager.instance.PlayRandomClip(goodPaperClips, transform, 1f);
+
         }
         else if (collision.gameObject.CompareTag("BadPaper"))
         {
             Destroy(collision.gameObject);
             manager.GovernmentTolerance--;
             Debug.Log("GT: " + manager.GovernmentTolerance);
+            soundManager.instance.PlayRandomClip(badPaperClips, transform, 1f);
         }
         else if(collision.gameObject.CompareTag("ResistancePaper"))
         {
             Destroy (collision.gameObject);
-            manager.GovernmentTolerance =- 2;
+            manager.GovernmentTolerance =- 1;
             manager.ResistancePoints ++;
             Debug.Log("GT = " + manager.GovernmentTolerance + " Res = " + manager.ResistancePoints);
+            soundManager.instance.PlayRandomClip(resistancePaperClips, transform, 1f);
+
         }
     }
 }
