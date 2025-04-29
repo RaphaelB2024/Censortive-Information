@@ -6,7 +6,7 @@ public class DayButton : MonoBehaviour
 {
     public DayManager manager;
     Vector3 mousePos;
-
+    [SerializeField] private GameObject musicManager;
     private Vector3 GetMousePos()
     {
         return Camera.main.WorldToScreenPoint(transform.position);
@@ -15,5 +15,6 @@ public class DayButton : MonoBehaviour
     private void OnMouseDown()
     {
         manager.startDay = true;
+        musicManager.SetActive(true);
     }
 }

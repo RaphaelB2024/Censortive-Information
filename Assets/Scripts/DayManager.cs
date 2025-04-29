@@ -11,7 +11,6 @@ public class DayManager : MonoBehaviour
     public CamMover Mover;
     public GameObject Spawner;
     public GameObject mainCamera;
-    public GameObject startText;
 
 
     public bool startDay = false;
