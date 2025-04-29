@@ -4941,9 +4941,6 @@ MonoBehaviour:
   - {fileID: 5219260263711674470, guid: a254c3b26f7bbed4d83ed820ea6f0cbd, type: 3}
   - {fileID: 8037398709828521040, guid: 4ac825f8f89d1e84c9cbd96916cfc50b, type: 3}
   - {fileID: 422826249611267711, guid: 64ad4baba7b048e4d90fb9f6d8c24989, type: 3}
-  - {fileID: 7506128762390306082, guid: ff49d09684927cf44bcc0e45f2306eb7, type: 3}
-  - {fileID: 847131775105784290, guid: 62e304ed4e22fe04195dfe8b78d03742, type: 3}
-  - {fileID: 6991969286818654598, guid: 110be44102b91c349a310e6f9fba5b29, type: 3}
   minX: -16
   maxX: -11
   minZ: -7.5
