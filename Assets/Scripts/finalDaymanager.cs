@@ -11,7 +11,6 @@ public class finalDayManager : MonoBehaviour
     public CamMover Mover;
     public GameObject Spawner;
     public GameObject mainCamera;
-    public GameObject startText;
 
 
     public bool startDay = false;
@@ -41,7 +40,6 @@ public class finalDayManager : MonoBehaviour
         if (startDay)
         {
             Mover.move = true;
-            startText.SetActive(false);
             Spawner.SetActive(true);
             dayTimer += Time.deltaTime;
         }
