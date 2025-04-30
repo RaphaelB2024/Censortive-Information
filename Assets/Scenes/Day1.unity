@@ -1231,12 +1231,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 7184392919647100529, guid: c03c98b32ac1cfc49aeb069f7180940d, type: 3}
-  goodPaperClips:
-  - {fileID: 0}
-  badPaperClips:
-  - {fileID: 8300000, guid: aee3dd8e7f4af8941a61a1ca5e821361, type: 3}
-  resistancePaperClips:
-  - {fileID: 0}
+  goodPaperClips: []
+  badPaperClips: []
+  resistancePaperClips: []
   papernoise: {fileID: 8300000, guid: 7dead28f483fe89439850aaec901341f, type: 3}
 --- !u!1 &410197244
 GameObject:
@@ -4011,7 +4008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1411435969
 MonoBehaviour:
   m_ObjectHideFlags: 0
