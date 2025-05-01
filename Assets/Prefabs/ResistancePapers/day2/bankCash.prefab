@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7995160528509387264}
   - component: {fileID: 1626528855715143039}
   - component: {fileID: 3408548146527422801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bankCash
   m_TagString: ResistancePaper
   m_Icon: {fileID: 0}

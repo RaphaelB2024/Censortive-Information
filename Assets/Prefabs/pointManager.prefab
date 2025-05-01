@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8112523179625567105}
   - component: {fileID: 7184392919647100529}
-  - component: {fileID: 2181823493877094133}
   m_Layer: 0
   m_Name: pointManager
   m_TagString: Untagged
@@ -43,21 +42,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c413ea0e17b30604abe35f47cb54fd0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GovernmentTolerance: 10
-  ResistancePoints: 0
-  Quota: 0
-  quotaTarget: 20
---- !u!114 &2181823493877094133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4967413061667815292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7a5fb716ece956479365dae014ea424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

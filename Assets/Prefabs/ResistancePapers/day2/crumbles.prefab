@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 297126812815478059}
   - component: {fileID: 7246287801163907626}
   - component: {fileID: 2351547482001259475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: crumbles
   m_TagString: ResistancePaper
   m_Icon: {fileID: 0}

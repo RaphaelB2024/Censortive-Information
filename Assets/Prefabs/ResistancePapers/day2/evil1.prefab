@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1829791472063214305}
   - component: {fileID: 8938419509890143532}
   - component: {fileID: 70195632818438794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: evil1
   m_TagString: ResistancePaper
   m_Icon: {fileID: 0}

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaperTray : MonoBehaviour
+public class finalPaperTray : MonoBehaviour
 {
-    public DayManager DayManager;
+    public finalDayManager DayManager;
     [SerializeField] private AudioClip[] goodPaperClips;
     [SerializeField] private AudioClip[] badPaperClips;
     [SerializeField] private AudioClip[] resistancePaperClips;
@@ -18,8 +18,7 @@ public class PaperTray : MonoBehaviour
             Destroy(collision.gameObject);
             DayManager.quota++;
             Debug.Log("Quota: " + DayManager.quota);
-            Debug.Log("GT: " + PointManager.GovernmentTolerance);
-            //soundManager.instance.PlayRandomClip(goodPaperClips, transform, 1f);
+           // soundManager.instance.PlayRandomClip(goodPaperClips, transform, 1f);
 
         }
         else if (collision.gameObject.CompareTag("BadPaper"))
@@ -33,10 +32,10 @@ public class PaperTray : MonoBehaviour
         else if(collision.gameObject.CompareTag("ResistancePaper"))
         {
             Destroy(collision.gameObject);
-            PointManager.GovernmentTolerance =- 1;
+            PointManager.GovernmentTolerance --;
             PointManager.ResistancePoints ++;
             Debug.Log("GT = " + PointManager.GovernmentTolerance + " Res = " + PointManager.ResistancePoints);
-            //soundManager.instance.PlayRandomClip(resistancePaperClips, transform, 1f);
+           // soundManager.instance.PlayRandomClip(resistancePaperClips, transform, 1f);
         }
     }
 }
