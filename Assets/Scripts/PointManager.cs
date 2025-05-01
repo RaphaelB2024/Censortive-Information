@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PointManager : MonoBehaviour
 {
-    public float GovernmentTolerance = 10;
-    public int ResistancePoints = 0;
-    public int Quota = 0;
-    public int quotaTarget = 20;
+    public static float GovernmentTolerance = 10;
+    public static int ResistancePoints = 0;
 }

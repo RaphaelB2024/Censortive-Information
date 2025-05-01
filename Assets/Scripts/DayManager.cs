@@ -6,11 +6,12 @@ using static UnityEngine.GraphicsBuffer;
 
 public class DayManager : MonoBehaviour
 {
-    public PointManager manager;
     public UIFade UIFade;
     public CamMover Mover;
     public GameObject Spawner;
     public GameObject mainCamera;
+    public int quota;
+    public int quotaTarget;
 
 
     public bool startDay = false;
@@ -20,7 +21,7 @@ public class DayManager : MonoBehaviour
     IEnumerator NextDay()
     {
         yield return new WaitForSeconds(6f);
-        manager.GovernmentTolerance += Random.Range(0, 5);
+        PointManager.GovernmentTolerance += Random.Range(0, 5);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -45,7 +46,7 @@ public class DayManager : MonoBehaviour
             Spawner.SetActive(false);
             UIFade.FadeIn();
             
-            if (manager.GovernmentTolerance > 0 && manager.Quota >= manager.quotaTarget)
+            if (PointManager.GovernmentTolerance > 0 && quota >= quotaTarget)
             {
                 StartCoroutine(NextDay());
             }

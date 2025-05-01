@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PaperTray : MonoBehaviour
 {
-    public PointManager manager;
+    public DayManager DayManager;
     [SerializeField] private AudioClip[] goodPaperClips;
     [SerializeField] private AudioClip[] badPaperClips;
     [SerializeField] private AudioClip[] resistancePaperClips;
@@ -16,9 +16,9 @@ public class PaperTray : MonoBehaviour
         {
             soundManager.instance.PlayClip(papernoise, transform, 1f);
             Destroy(collision.gameObject);
-            manager.Quota++;
-            Debug.Log("Quota: " + manager.Quota);
-            Debug.Log("GT: " + manager.GovernmentTolerance);
+            DayManager.quota++;
+            Debug.Log("Quota: " + DayManager.quota);
+            Debug.Log("GT: " + PointManager.GovernmentTolerance);
             soundManager.instance.PlayRandomClip(goodPaperClips, transform, 1f);
 
         }
@@ -26,17 +26,17 @@ public class PaperTray : MonoBehaviour
         {
             soundManager.instance.PlayClip(papernoise, transform, 1f);
             Destroy(collision.gameObject);
-            manager.GovernmentTolerance--;
-            Debug.Log("GT: " + manager.GovernmentTolerance);
+            PointManager.GovernmentTolerance--;
+            Debug.Log("GT: " + PointManager.GovernmentTolerance);
             soundManager.instance.PlayRandomClip(badPaperClips, transform, 1f);
         }
         else if(collision.gameObject.CompareTag("ResistancePaper"))
         {
-            manager.GovernmentTolerance += 0.5f;
+            PointManager.GovernmentTolerance += 0.5f;
             Destroy(collision.gameObject);
-            manager.GovernmentTolerance =- 1;
-            manager.ResistancePoints ++;
-            Debug.Log("GT = " + manager.GovernmentTolerance + " Res = " + manager.ResistancePoints);
+            PointManager.GovernmentTolerance =- 1;
+            PointManager.ResistancePoints ++;
+            Debug.Log("GT = " + PointManager.GovernmentTolerance + " Res = " + PointManager.ResistancePoints);
             soundManager.instance.PlayRandomClip(resistancePaperClips, transform, 1f);
         }
     }
