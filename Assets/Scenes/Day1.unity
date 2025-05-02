@@ -3924,11 +3924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29f83dfd2a3de404981d8c964568d7a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.761
+      value: 7.352
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29f83dfd2a3de404981d8c964568d7a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.908
+      value: -6.163
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29f83dfd2a3de404981d8c964568d7a4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5353,6 +5353,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2201dedbb452264385b3484db062beb, type: 3}
       propertyPath: m_Name
       value: get new batteries for the clock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2201dedbb452264385b3484db062beb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
