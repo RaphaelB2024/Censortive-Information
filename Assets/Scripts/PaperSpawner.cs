@@ -5,7 +5,9 @@ using UnityEngine;
 public class PaperSpawner : MonoBehaviour
 {
     //Create public array of objects to spawn
-    public GameObject[] objectsToSpawn;
+    public List<GameObject> objectsToSpawn;
+    public List<GameObject> spawnedObjects = new List<GameObject>();
+
 
     public float minX;
     public float maxX;
@@ -36,7 +38,7 @@ public class PaperSpawner : MonoBehaviour
         //if time has passed amount to wait,
         if (timeSinceSpawn > timeTillSpawn)
         {
-            int selection = Random.Range(0, objectsToSpawn.Length);
+            int selection = Random.Range(0, objectsToSpawn.length);
 
             //Assign a random spawnpoint to the paper
             Vector3 randompos = new Vector3(Random.Range(minX, maxX), 15, Random.Range(minZ, maxZ));
