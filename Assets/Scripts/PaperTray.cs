@@ -18,7 +18,6 @@ public class PaperTray : MonoBehaviour
             Destroy(collision.gameObject);
             DayManager.quota++;
             Debug.Log("Quota: " + DayManager.quota);
-            Debug.Log("GT: " + PointManager.GovernmentTolerance);
             //soundManager.instance.PlayRandomClip(goodPaperClips, transform, 1f);
 
         }

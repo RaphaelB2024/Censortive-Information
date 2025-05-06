@@ -4,56 +4,84 @@ using UnityEngine;
 
 public class PaperSpawner : MonoBehaviour
 {
-    //Create public array of objects to spawn
-    //public List<GameObject> objectsToSpawn;
-    // public List<GameObject> spawnedObjects = new List<GameObject>();
-
-    public GameObject[] objectsToSpawn;
-
-
-    public float minX;
-    public float maxX;
-    public float minZ;
-    public float maxZ;
-
-    float timeTillSpawn;            //Length to wait before spawning new object
-    float timeSinceSpawn = 0.0f;    //Time since last object was spawned
-
-    public float minSpawnTime = 0.5f; //Minimum time between spawns
-    public float maxSpawnTime = 3.0f; //Maximum time between spawns
-
-
-    // Start is called before the first frame update
-    void Start()
+    [System.Serializable]
+    public class Pool
     {
-        //random range between two values
-        timeTillSpawn = Random.Range(minSpawnTime, maxSpawnTime);
+        public GameObject prefab;
+        public int poolSize = 10;
+        [HideInInspector] public Queue<GameObject> objects;
     }
 
-    // Update is called once per frame
+    public Pool[] pools;
+
+    public float minX, maxX, minZ, maxZ;
+    public float spawnHeight = 15f;
+
+    public float minSpawnTime = 0.5f;
+    public float maxSpawnTime = 3.0f;
+
+    private float nextSpawnTime;
+
+    void Start()
+    {
+        // Initialize object queues
+        foreach (Pool pool in pools)
+        {
+            pool.objects = new Queue<GameObject>();
+
+            for (int i = 0; i < pool.poolSize; i++)
+            {
+                GameObject obj = Instantiate(pool.prefab);
+                obj.SetActive(false);
+                pool.objects.Enqueue(obj);
+            }
+        }
+
+        ScheduleNextSpawn();
+    }
+
     void Update()
     {
-        //Add time passed since last frame
-        //this creates a float counting up in seconds
-        timeSinceSpawn = timeSinceSpawn + Time.deltaTime;
-
-        //if time has passed amount to wait,
-        if (timeSinceSpawn > timeTillSpawn)
+        if (Time.time >= nextSpawnTime)
         {
-
-            int selection = Random.Range(0, objectsToSpawn.Length);
-
-            //Assign a random spawnpoint to the paper
-            Vector3 randompos = new Vector3(Random.Range(minX, maxX), 15, Random.Range(minZ, maxZ));
-
-            //Instantiate spawns a gameObject - this case from objectsToSpawn
-            //second parameter is where to spawn
-            //third parameter is rotation, Quarternion.identity means no rotation
-            Instantiate(objectsToSpawn[selection], randompos, Quaternion.Euler( new Vector3(90,0,0)));
-
-            //After spawn, timer is reset and a new time until spawn is selected
-            timeTillSpawn = Random.Range(minSpawnTime, maxSpawnTime);
-            timeSinceSpawn = 0.0f;
+            SpawnObject();
+            ScheduleNextSpawn();
         }
+    }
+
+    void ScheduleNextSpawn()
+    {
+        nextSpawnTime = Time.time + Random.Range(minSpawnTime, maxSpawnTime);
+    }
+
+    void SpawnObject()
+    {
+        if (pools.Length == 0) return;
+
+        int selection = Random.Range(0, pools.Length);
+        Pool selectedPool = pools[selection];
+
+        if (selectedPool.objects.Count == 0)
+        {
+            Debug.LogWarning("No objects available in pool for: " + selectedPool.prefab.name);
+            return;
+        }
+
+        GameObject obj = selectedPool.objects.Dequeue();
+        Vector3 randomPos = new Vector3(Random.Range(minX, maxX), spawnHeight, Random.Range(minZ, maxZ));
+
+        obj.transform.position = randomPos;
+        obj.transform.rotation = Quaternion.Euler(90, 0, 0);
+        obj.SetActive(true);
+
+        // Optionally: Re-enqueue after delay or upon custom event
+        //StartCoroutine(DisableAndRequeue(obj, selectedPool, 5f)); // Disable after 5 seconds
+    }
+
+    IEnumerator DisableAndRequeue(GameObject obj, Pool pool, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        obj.SetActive(false);
+        pool.objects.Enqueue(obj);
     }
 }
