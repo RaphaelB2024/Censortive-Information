@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.13, y: 15.274, z: -9.06}
-  m_LocalScale: {x: 1.1476965, y: 1.1476966, z: 1.1476966}
+  m_LocalScale: {x: 0.6437668, y: 0.6437669, z: 0.6437669}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.59, y: 4.62}
+  m_Size: {x: 6.12, y: 8.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,8 +106,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.5476773, y: 4.5336967, z: 4.511378}
-  m_Center: {x: 0.065743625, y: -0.025510905, z: 2.2902832}
+  m_Size: {x: 5.9164505, y: 7.8308134, z: 4.511378}
+  m_Center: {x: 0.03256619, y: -0.027067998, z: 2.290283}
 --- !u!54 &5033118844209550569
 Rigidbody:
   m_ObjectHideFlags: 0

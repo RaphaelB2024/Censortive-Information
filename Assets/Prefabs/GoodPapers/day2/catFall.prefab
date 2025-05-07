@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1043796837559063468}
   - component: {fileID: 6697787193807487720}
   m_Layer: 0
-  m_Name: catFeet
+  m_Name: catFall
   m_TagString: GoodPaper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.261821, y: 15.391, z: -9.6561985}
-  m_LocalScale: {x: 1.2194941, y: 1.2194941, z: 1.2194941}
+  m_LocalScale: {x: 0.6837322, y: 0.6837322, z: 0.6837322}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5e3502ff748dae44a858554cc556bb8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c483154ef0007f2418cd5b1944348957, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.59, y: 4.62}
+  m_Size: {x: 5.42, y: 7.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,8 +106,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.246841, y: 4.453933, z: 4.511381}
-  m_Center: {x: -0.00595517, y: -0.0061849183, z: 2.2902813}
+  m_Size: {x: 5.3151336, y: 7.3528266, z: 4.5113807}
+  m_Center: {x: -0.0049271453, y: 0.0056407433, z: 2.2902813}
 --- !u!54 &1043796837559063468
 Rigidbody:
   m_ObjectHideFlags: 0

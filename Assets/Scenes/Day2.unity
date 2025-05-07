@@ -1488,7 +1488,7 @@ MonoBehaviour:
   Spawner: {fileID: 1910924321}
   mainCamera: {fileID: 963194225}
   quota: 0
-  quotaTarget: 10
+  quotaTarget: 8
   startDay: 0
   dayTimer: 0
   dayLength: 104
@@ -4923,30 +4923,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 665782539a91186458bc99261dc29881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsToSpawn:
-  - {fileID: 2930687035642033729, guid: d242cf83cdf23c6488c50e8764063d14, type: 3}
-  - {fileID: 3735347653473396256, guid: 91ae38a96f8b9d3458c4e5c3fd182538, type: 3}
-  - {fileID: 6062087202579359231, guid: d21cb463b9f60514c91ba09c61d5bcd7, type: 3}
-  - {fileID: 7139104636069401150, guid: cba9c5c02dec2d449a75f897681b6c75, type: 3}
-  - {fileID: 6735263312137737637, guid: ce51b4e057536624a81cb3783ebbee4c, type: 3}
-  - {fileID: 5193418940629852720, guid: 6b344d7778ff57448b1b6debd056aa72, type: 3}
-  - {fileID: 873091012628349036, guid: 821990e065c8b654fbb57d456b4d610e, type: 3}
-  - {fileID: 6105969403125552047, guid: 791f044629f1cde4da505bfcd4e9cfe7, type: 3}
-  - {fileID: 3630060055287224502, guid: 5abeaa9871632a9468f9046e2b30b648, type: 3}
-  - {fileID: 7926424475566461784, guid: ee51b8eeedade7040a2e6d0eab302c14, type: 3}
-  - {fileID: 3027760392024037136, guid: f521b236faff39547b2e17e77cb69edd, type: 3}
-  - {fileID: 3736222360863064304, guid: d1f97e6f9d3d91244a76678c5499f070, type: 3}
-  - {fileID: 979062735728362800, guid: 1f7eac823dd8e5b4289feaa9556d5947, type: 3}
-  - {fileID: 1917092694070837342, guid: 495aed5c14d1caf4e910c0f5f26667e9, type: 3}
-  - {fileID: 5674761808679419487, guid: 2c69a2acdb7712743bed59be4b68e18c, type: 3}
-  - {fileID: 5996876629659167602, guid: 58da0a578d3e21745853fde0318dde03, type: 3}
-  - {fileID: 6345926693890888390, guid: 35df34eebf2b4e442a268364ca20270d, type: 3}
-  - {fileID: 3885660758827522909, guid: e7ddf97252867b9438e90456c8977261, type: 3}
-  - {fileID: 7661646490663539761, guid: e28486b223b357a4f83ece14260c9609, type: 3}
+  pools:
+  - prefab: {fileID: 6735263312137737637, guid: ce51b4e057536624a81cb3783ebbee4c, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 5193418940629852720, guid: 6b344d7778ff57448b1b6debd056aa72, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 873091012628349036, guid: 821990e065c8b654fbb57d456b4d610e, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 6105969403125552047, guid: 791f044629f1cde4da505bfcd4e9cfe7, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 3630060055287224502, guid: 5abeaa9871632a9468f9046e2b30b648, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 7926424475566461784, guid: ee51b8eeedade7040a2e6d0eab302c14, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 3027760392024037136, guid: f521b236faff39547b2e17e77cb69edd, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 3736222360863064304, guid: d1f97e6f9d3d91244a76678c5499f070, type: 3}
+    poolSize: 0
+  - prefab: {fileID: 979062735728362800, guid: 1f7eac823dd8e5b4289feaa9556d5947, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 1917092694070837342, guid: 495aed5c14d1caf4e910c0f5f26667e9, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 2930687035642033729, guid: d242cf83cdf23c6488c50e8764063d14, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 6062087202579359231, guid: d21cb463b9f60514c91ba09c61d5bcd7, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 7139104636069401150, guid: cba9c5c02dec2d449a75f897681b6c75, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 3735347653473396256, guid: 91ae38a96f8b9d3458c4e5c3fd182538, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 5674761808679419487, guid: 2c69a2acdb7712743bed59be4b68e18c, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 5996876629659167602, guid: 58da0a578d3e21745853fde0318dde03, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 6345926693890888390, guid: 35df34eebf2b4e442a268364ca20270d, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 3885660758827522909, guid: e7ddf97252867b9438e90456c8977261, type: 3}
+    poolSize: 3
+  - prefab: {fileID: 7661646490663539761, guid: e28486b223b357a4f83ece14260c9609, type: 3}
+    poolSize: 3
   minX: -16
   maxX: -11
   minZ: -7.5
   maxZ: -3
+  spawnHeight: 15
   minSpawnTime: 2
   maxSpawnTime: 6
 --- !u!4 &1910924323

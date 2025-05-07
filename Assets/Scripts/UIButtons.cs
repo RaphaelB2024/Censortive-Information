@@ -30,6 +30,11 @@ public class UIButtons : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
+    public void Delete()
+    {
+        Destroy(gameObject);
+    }
+
     public void quit()
     {
         Application.Quit();

@@ -51,7 +51,7 @@ public class finalDayManager : MonoBehaviour
             Spawner.SetActive(false);
             UIFade.FadeIn();
 
-            if (PointManager.GovernmentTolerance > -10 && quota >= quotaTarget && PointManager.ResistancePoints >= 6)
+            if (PointManager.GovernmentTolerance > -10 && quota >= quotaTarget && PointManager.ResistancePoints >= 4)
             {
                 StartCoroutine(ResEnd());
             }
