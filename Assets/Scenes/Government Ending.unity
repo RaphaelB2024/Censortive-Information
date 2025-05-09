@@ -2840,6 +2840,7 @@ MonoBehaviour:
   - with your censorship skills the government will never be overthrown!
   - See you next week!
   textSpeed: 0.003
+  screenNoise: {fileID: 0}
 --- !u!1 &1769012323
 GameObject:
   m_ObjectHideFlags: 0

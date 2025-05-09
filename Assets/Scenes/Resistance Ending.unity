@@ -1553,7 +1553,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -3844523693668664822, guid: 832f0442279cd2243a84e9a78728efd6, type: 2}
   m_audioClip: {fileID: 8300000, guid: 601da73c9060d944dbba37f2ace8b53a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.235
+  m_Volume: 0.145
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3720,6 +3720,7 @@ MonoBehaviour:
   - you're really bad at your job, you know.
   - looks like you've caused a revolution.
   textSpeed: 0.003
+  screenNoise: {fileID: 0}
 --- !u!1 &1769012323
 GameObject:
   m_ObjectHideFlags: 0

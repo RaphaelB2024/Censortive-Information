@@ -9,6 +9,7 @@ public class DialogueController : MonoBehaviour
     public GameObject failScreen;
     public string[] lines;
     public float textSpeed;
+    [SerializeField] private AudioClip screenNoise;
 
     private int index;
 
@@ -63,6 +64,7 @@ public class DialogueController : MonoBehaviour
         {
             failScreen.SetActive(true);
             gameObject.SetActive(false);
+            soundManager.instance.PlayClip(screenNoise, transform, 1f);
         }
     }
 }

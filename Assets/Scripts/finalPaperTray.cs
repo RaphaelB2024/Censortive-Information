@@ -18,7 +18,7 @@ public class finalPaperTray : MonoBehaviour
             Destroy(collision.gameObject);
             DayManager.quota++;
             Debug.Log("Quota: " + DayManager.quota);
-           // soundManager.instance.PlayRandomClip(goodPaperClips, transform, 1f);
+            soundManager.instance.PlayRandomClip(goodPaperClips, transform, 1f);
 
         }
         else if (collision.gameObject.CompareTag("BadPaper"))
@@ -27,7 +27,7 @@ public class finalPaperTray : MonoBehaviour
             Destroy(collision.gameObject);
             PointManager.GovernmentTolerance--;
             Debug.Log("GT: " + PointManager.GovernmentTolerance);
-            //soundManager.instance.PlayRandomClip(badPaperClips, transform, 1f);
+            soundManager.instance.PlayRandomClip(badPaperClips, transform, 1f);
         }
         else if(collision.gameObject.CompareTag("ResistancePaper"))
         {
@@ -35,7 +35,7 @@ public class finalPaperTray : MonoBehaviour
             PointManager.GovernmentTolerance --;
             PointManager.ResistancePoints ++;
             Debug.Log("GT = " + PointManager.GovernmentTolerance + " Res = " + PointManager.ResistancePoints);
-           // soundManager.instance.PlayRandomClip(resistancePaperClips, transform, 1f);
+            soundManager.instance.PlayRandomClip(resistancePaperClips, transform, 1f);
         }
     }
 }

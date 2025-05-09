@@ -1572,6 +1572,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &840455389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 840455391}
+  - component: {fileID: 840455390}
+  m_Layer: 0
+  m_Name: soundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &840455390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840455389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da3a8fe8d5b6249beea629ef4cf762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxObject: {fileID: 6335607234898585560, guid: 85e6140142bc7b248ae196755e7576f7, type: 3}
+--- !u!4 &840455391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840455389}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.286604, y: 13.241683, z: 0.4466471}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &857009577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +2821,7 @@ MonoBehaviour:
   - 'you''re fired '
   - that's gonna be bad for your health
   textSpeed: 0.003
+  screenNoise: {fileID: 8300000, guid: caa97a0c37b6002488e1dd561fae4dbb, type: 3}
 --- !u!1 &1769012323
 GameObject:
   m_ObjectHideFlags: 0
@@ -3534,3 +3580,4 @@ SceneRoots:
   - {fileID: 386858136}
   - {fileID: 857009578}
   - {fileID: 2008499516}
+  - {fileID: 840455391}

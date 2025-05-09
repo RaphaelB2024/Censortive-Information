@@ -31,7 +31,7 @@ public class IncinButton : MonoBehaviour
     {
         Fires.SetActive(true);
         incineratable = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.84f);
         Fires.SetActive(false);
         incineratable = true;
     }
